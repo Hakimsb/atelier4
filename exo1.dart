@@ -1,5 +1,3 @@
-// fichier : exo1.dart
-
 class Couleur {
   final int r;
   final int g;
@@ -17,13 +15,14 @@ class Couleur {
 }
 
 void main() {
-  var rouge = Couleur.rouge();
-  var vert = Couleur.vert();
-  var bleu = Couleur.bleu();
+  Couleur rouge = Couleur.rouge();
+  Couleur vert = Couleur.vert();
+  Couleur bleu = Couleur.bleu();
 
   print('Affichage des couleurs prédéfinies :');
   rouge.afficherCouleur();
   vert.afficherCouleur();
   bleu.afficherCouleur();
 }
+
 
