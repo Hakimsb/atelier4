@@ -1,12 +1,23 @@
 
+// Q1-Q7 : Classe Livre avec attributs privés, getter et méthode statique
 class Livre {
   String titre;
   String auteur;
+  final int _pages = 200;
+  static int totalLivres = 0;
 
-  Livre(this.titre, this.auteur);
+  Livre(this.titre, this.auteur) {
+    totalLivres++;
+  }
+
+  int get pages => _pages;
 
   void afficherInfos() {
-    print("Titre : $titre, Auteur : $auteur");
+    print("Titre : $titre, Auteur : $auteur, Pages : $pages");
+  }
+
+  static void afficherTotalLivres() {
+    print("Nombre total de livres créés : $totalLivres");
   }
 }
 
@@ -18,4 +29,7 @@ void main() {
   l1.afficherInfos();
   l2.afficherInfos();
   l3.afficherInfos();
+
+  Livre.afficherTotalLivres();
 }
+
