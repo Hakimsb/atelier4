@@ -14,4 +14,10 @@ class Compte {
       print("Le montant doit être positif !");
     }
   }
+  void main() {
+  Compte monCompte = Compte("123456789");
+  monCompte.depot(150.0);
+  print("Solde du compte ${monCompte.numeroCompte} : ${monCompte.solde}");
+}
+
 }
