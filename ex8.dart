@@ -30,3 +30,12 @@ void main() {
   livre2.afficherInfos();
   livre3.afficherInfos();
 }
+class Roman extends Livre {
+  String genre;
+
+  Roman(String titre, String auteur, this.genre) : super(titre, auteur);
+
+  void afficherInfos() {
+    print("Titre: $titre, Auteur: $auteur, Genre: $genre");
+  }
+}
