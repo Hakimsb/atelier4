@@ -1,5 +1,4 @@
-
-// Q1-Q7 : Classe Livre avec attributs privés, getter et méthode statique
+// Q1-Q9 : Classe Livre + héritage avec Roman
 class Livre {
   String titre;
   String auteur;
@@ -21,14 +20,26 @@ class Livre {
   }
 }
 
+// Q8-Q9 : Classe Roman héritant de Livre
+class Roman extends Livre {
+  String genre;
+
+  Roman(String titre, String auteur, this.genre) : super(titre, auteur);
+
+  @override
+  void afficherInfos() {
+    print("Titre : $titre, Auteur : $auteur, Genre : $genre, Pages : $pages");
+  }
+}
+
 void main() {
   Livre l1 = Livre("Le Petit Prince", "Antoine de Saint-Exupéry");
-  Livre l2 = Livre("1984", "George Orwell");
-  Livre l3 = Livre("L'Étranger", "Albert Camus");
+  Roman r1 = Roman("Sherlock Holmes", "Arthur Conan Doyle", "Policier");
+  Roman r2 = Roman("Orgueil et Préjugés", "Jane Austen", "Romance");
 
   l1.afficherInfos();
-  l2.afficherInfos();
-  l3.afficherInfos();
+  r1.afficherInfos();
+  r2.afficherInfos();
 
   Livre.afficherTotalLivres();
 }
