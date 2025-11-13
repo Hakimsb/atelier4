@@ -26,16 +26,17 @@ void main() {
   var livre3 = Livre('L\'Étranger', 'Albert Camus');
 
 
+
   livre1.afficherInfos();
   livre2.afficherInfos();
   livre3.afficherInfos();
-}
-class Roman extends Livre {
-  String genre;
 
-  Roman(String titre, String auteur, this.genre) : super(titre, auteur);
 
-  void afficherInfos() {
-    print("Titre: $titre, Auteur: $auteur, Genre: $genre");
-  }
+ var roman1 =("Le Crime de l’Orient-Express", "Agatha Christie", "Policier");
+  var roman2 = ("Les Misérables", "Victor Hugo", "Drame");
+  var roman3 = ("Dune", "Frank Herbert", "Science-fiction");
+
+
+ 
+  Livre.afficherTotalLivres();
 }
