@@ -17,6 +17,18 @@ class Livre {
     print("Total de livres créés: $totalLivres");
 }
 }
+class Roman extends Livre {
+  String genre;
+
+  
+  Roman(String titre, String auteur, this.genre) : super(titre, auteur);
+
+  
+  @override
+  void afficherInfos() {
+    print("Titre: $titre, Auteur: $auteur,  Genre: $genre");
+  }
+}
 
 void main() {
   Livre livre1 = Livre("Le Petit Prince", "Antoine de Saint-Exupéry");
@@ -25,4 +37,12 @@ void main() {
   livre1.afficherInfos();
   livre2.afficherInfos();
   Livre.afficherTotalLivres(); 
+ 
+  Roman roman1 = Roman("Da Vinci Code", "Dan Brown", "Thriller");
+  Roman roman2 = Roman("Sherlock Holmes", "Arthur Conan Doyle", "Policier");
+
+  roman1.afficherInfos();
+  roman2.afficherInfos();
+  Livre.afficherTotalLivres(); 
 }
+
