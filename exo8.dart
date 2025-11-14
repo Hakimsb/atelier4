@@ -41,8 +41,17 @@ void main() {
   Roman roman1 = Roman("Da Vinci Code", "Dan Brown", "Thriller");
   Roman roman2 = Roman("Sherlock Holmes", "Arthur Conan Doyle", "Policier");
 
-  roman1.afficherInfos();
-  roman2.afficherInfos();
-  Livre.afficherTotalLivres(); 
+ roman1.afficherInfos();
+  roman2.afficherInfos(); 
+ 
+
+Roman roman4 = Roman("Da Vinci Code", "Dan Brown", "Thriller");
+Roman roman5 = Roman("Sherlock Holmes", "Arthur Conan Doyle", "Policier");
+Roman roman3 = Roman("1984", "George Orwell", "Science-fiction");
+
+roman1.afficherInfos();
+roman2.afficherInfos();
+roman3.afficherInfos();
+ Livre.afficherTotalLivres(); 
 }
 
